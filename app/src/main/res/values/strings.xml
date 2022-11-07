@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">SoccerScoreApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dash">-</string>
+    <string name="played">Played</string>
+    <string name="team">Team</string>
+    <string name="win">Win</string>
+    <string name="lose">Lose</string>
+    <string name="draw">Draw</string>
+    <string name="gm">GM</string>
+    <string name="gk">GK</string>
+    <string name="detail_league">Detail League</string>
+    <string name="league_name">League Name</string>
+    <string name="first_event">First Event</string>
+    <string name="country">Country</string>
+    <string name="gender">Gender</string>
+    <string name="event">Event</string>
+    <string name="flag">Flag</string>
+    <string name="score">Score</string>
+    <string name="shoots">Shoots</string>
+    <string name="formation">Formation</string>
+    <string name="home_goal_details">Home Goal Details</string>
+    <string name="away_goal_detail">Away Goal Detail</string>
+    <string name="goals">Goals:</string>
+    <string name="search_team">Search Team</string>
+    <string name="year">Year</string>
+    <string name="sport">Sport</string>
+    <string name="coachname">CoachName</string>
+    <string name="coach">Coach</string>
+    <string name="uefa_rank">UEFA Rank:</string>
+    <string name="twitter">Twitter:</string>
+    <string name="live_today">Live Today</string>
+    <string name="livenow">LiveNow</string>
+    <string name="load">Load</string>
+</resources>

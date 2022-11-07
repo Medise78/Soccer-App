@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHomeLeagues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_700"
+        tools:listitem="@layout/item_league" />
+
+
+    <lee.module.lottieswiperefreshlayout.LottieSwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rvHomeLeagues"
+        android:layout_above="@id/viewBottom"
+        android:scrollbars="vertical"
+        app:lottie_srl_alpha_enabled="true"
+        app:lottie_srl_rawRes="@raw/soccer"
+        app:lottie_srl_scale_enabled="true"
+        app:lottie_srl_size="@dimen/dimen_80dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_home_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_match" />
+
+    </lee.module.lottieswiperefreshlayout.LottieSwipeRefreshLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/reloading"
+        android:layout_width="@dimen/dimen_150dp"
+        android:layout_height="@dimen/dimen_150dp"
+        android:layout_centerInParent="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/soccer" />
+
+    <View
+        android:id="@+id/viewBottom"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/load"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

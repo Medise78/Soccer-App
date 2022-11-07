@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.leader_board.LeaderBoardFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_700"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbarLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/purple_700"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <RelativeLayout
+                android:id="@+id/containerHeaderLeague"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/purple_700">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/dimen_70dp"
+                    android:layout_marginBottom="@dimen/dimen_20dp"
+                    app:cardCornerRadius="@dimen/dimen_8dp"
+                    app:cardElevation="@dimen/dimen_8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_10dp">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/loadingLeagueDetail"
+                            android:layout_width="@dimen/dimen_70dp"
+                            android:layout_height="@dimen/dimen_70dp"
+                            android:layout_centerInParent="true" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgLeagueLeaderBoard"
+                            android:layout_width="@dimen/dimen_100dp"
+                            android:layout_height="@dimen/dimen_100dp"
+                            android:layout_marginStart="@dimen/dimen_16dp"
+                            android:layout_marginTop="@dimen/dimen_16dp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvLeagueNameLeaderBoard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_8dp"
+                            android:layout_marginTop="@dimen/dimen_16dp"
+                            android:layout_toEndOf="@id/imgLeagueLeaderBoard"
+                            android:text="@string/league_name"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_text_16sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDescLeagueLeaderBoard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvLeagueNameLeaderBoard"
+                            android:layout_marginHorizontal="@dimen/dimen_8dp"
+                            android:layout_marginTop="@dimen/dimen_4dp"
+                            android:layout_toEndOf="@id/imgLeagueLeaderBoard"
+                            android:maxLines="5"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_text_14sp"
+                            tools:text="Description league" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTitleCountryLeaderBoard"
+                            android:layout_width="@dimen/dimen_100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imgLeagueLeaderBoard"
+                            android:layout_marginTop="@dimen/dimen_20dp"
+                            android:gravity="center"
+                            android:text="@string/country"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTitleEventLeaderBoard"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imgLeagueLeaderBoard"
+                            android:layout_marginTop="@dimen/dimen_20dp"
+                            android:layout_toEndOf="@id/tvTitleCountryLeaderBoard"
+                            android:gravity="center"
+                            android:text="@string/event"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTitleGenderLeaderBoard"
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imgLeagueLeaderBoard"
+                            android:layout_marginTop="@dimen/dimen_20dp"
+                            android:layout_toEndOf="@id/tvTitleEventLeaderBoard"
+                            android:gravity="center"
+                            android:text="@string/flag"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvCountryLeaderBoard"
+                            android:layout_width="@dimen/dimen_100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvTitleCountryLeaderBoard"
+                            android:layout_marginTop="@dimen/dimen_8dp"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            tools:text="England" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvEventLeaderBoard"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvTitleCountryLeaderBoard"
+                            android:layout_marginTop="@dimen/dimen_8dp"
+                            android:layout_toEndOf="@+id/tvCountryLeaderBoard"
+                            android:gravity="center"
+                            android:textColor="@color/colorBlack"
+                            tools:text="2000-08-18" />
+
+                        <ImageView
+                            android:id="@+id/imgCountryLeaderBoard"
+                            android:layout_width="@dimen/dimen_50dp"
+                            android:layout_height="@dimen/dimen_20dp"
+                            android:layout_below="@+id/tvTitleCountryLeaderBoard"
+                            android:layout_marginTop="@dimen/dimen_8dp"
+                            android:layout_toEndOf="@+id/tvEventLeaderBoard"
+                            android:layout_alignParentEnd="true"
+                            android:gravity="center"
+                            android:scaleType="fitCenter"
+                            android:contentDescription="@string/app_name"
+                            />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/ic_back_white"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout
+            android:id="@+id/containerHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/team"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@string/played"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@string/win"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@string/lose"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@string/draw"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@string/gm"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@string/gk"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvStanding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/containerHeader" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rvStanding"
+            android:background="@color/colorBlack" />
+
+    </RelativeLayout>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_waiting"
+        android:layout_width="@dimen/dimen_150dp"
+        android:layout_height="@dimen/dimen_150dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/soccer" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
