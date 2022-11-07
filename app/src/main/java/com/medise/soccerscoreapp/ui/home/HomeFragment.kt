@@ -48,22 +48,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
 
         setOnMatchClick()
         fetchLeaguesData()
-    }
-
-    @RequiresApi(Build.VERSION_CODES.M)
-    override fun onStart() {
-        super.onStart()
         setupRecyclerView()
-        reloadData()
         fetchData()
-        if (navController?.currentDestination?.id == R.id.homeFragment){
-
-        }else {
-            fetchData().cancel()
-            viewModel.reload()
-        }
-
+        reloadData()
     }
+
 
     @RequiresApi(Build.VERSION_CODES.M)
     @SuppressLint("NotifyDataSetChanged")
