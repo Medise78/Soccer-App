@@ -54,12 +54,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
     override fun onStart() {
         super.onStart()
         setupRecyclerView()
+        reloadData()
         fetchData()
         if (navController?.currentDestination?.id == R.id.homeFragment){
-            reloadData()
+
         }else {
             fetchData().cancel()
-            binding.swipeRefresh.isRefreshing = false
+            viewModel.reload()
         }
 
     }
